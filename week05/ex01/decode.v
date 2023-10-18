@@ -6,17 +6,17 @@ module decode(
 );
 
   // TODO: write your code here
-
-  always @(din) begin
-    if (din===0) begin
+    always @(din) begin
+    if (din ===0) begin
       zero = 1;
       even = 0;
-      odd  = 0;
+      odd = 0;
     end
-    else if(din[0]===1) begin
-      {odd ,even ,zero} = 3'b100;
-    end
-  else begin
-    {odd ,even ,zero} = 3'b010;
+    else if(din[0]===1)begin
+      {odd ,even ,zero}=3'b100;
   end
-endmodule
+  else begin
+    {odd,even,zero}= 3'b010;
+  end
+  end
+  endmodule
